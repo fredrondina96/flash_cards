@@ -51,6 +51,7 @@ class Round
         end
       #WHY CANT I USE .CURRENT_CARD HERE???
     elsif @c_card == 1
+        @turns << @deck.cards.[1]
         @turn2 = Turn.new(guess, @deck.cards[1])
         @total_questions += 1
           @c_card += 1
@@ -58,6 +59,7 @@ class Round
           @correct_answers += 1
         end
     elsif @c_card == 2
+        @turns << @deck.cards.[2]
         @total_questions += 1
         @turn3 = Turn.new(guess, @deck.cards[2])
         @c_card += 1
@@ -65,6 +67,7 @@ class Round
           @correct_answers += 1
         end
     elsif @c_card == 3
+        @turns << @deck.cards.[3]
         @total_questions += 1
         @turn4 = Turn.new(guess, @deck.cards[3])
           @c_card += 1
@@ -72,8 +75,6 @@ class Round
           @correct_answers += 1
         end
 
-        #now it think I should have a method called
-        #next turn that does just this
     end
 
 
