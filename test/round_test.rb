@@ -41,7 +41,6 @@ class RoundTest < Minitest::Test
   def test_it_can_return_a_percent_correct
         @round.take_turn("Juneau")
         @round.take_turn("Venus")
-        binding.pry
         assert_equal 0.5, @round.percent_correct
         #If I have time I will make this return an actual %
   end

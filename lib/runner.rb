@@ -23,5 +23,6 @@ gets
 puts card_1.question
 guess = gets.chomp
 turn1 = Turn.new(guess, deck.cards.first)
-round.take_turn(guess)
-binding.pry
+turn1.feedback
+# round.take_turn(guess)
+# binding.pry
